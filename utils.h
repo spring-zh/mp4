@@ -82,7 +82,7 @@ inline void bytesFromUInt16BE(unsigned char *bytes, UI16 value) {
 }
 
 UI32 durationMsFromUnits(UI64 units, UI32 unitsPerSecond);
-UI64 convertTime(UI64 timeValue, UI32 fromTimeScale, UI32 toTimeScale);
+SI64 convertTime(SI64 timeValue, UI32 fromTimeScale, UI32 toTimeScale);
 
 Result System_GenerateRandomBytes(UI08* buffer, Size buffer_size);
 

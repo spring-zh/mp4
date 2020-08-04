@@ -99,10 +99,10 @@ UI32 durationMsFromUnits(UI64 units, UI32 unitsPerSecond) {
     return (UI32) (((double) units * 1000.0) / (double) unitsPerSecond);
 }
 
-UI64 convertTime(UI64 timeValue, UI32 fromTimeScale, UI32 toTimeScale) {
+SI64 convertTime(SI64 timeValue, UI32 fromTimeScale, UI32 toTimeScale) {
     if (fromTimeScale == 0) return 0;
     double ratio = (double) toTimeScale / (double) fromTimeScale;
-    return ((UI64) (0.5 + (double) timeValue * ratio));
+    return (SI64) (timeValue * ratio);
 }
 
 void formatFourChars(char *str, UI32 value) {
