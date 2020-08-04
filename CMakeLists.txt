@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.7)
+cmake_minimum_required(VERSION 3.6)
 project(mp4)
 
 add_definitions(-D CONFIG_HAVE_ASSERT_H)
@@ -63,6 +63,6 @@ set(SOURCE_FILES
         sample_source.cpp log.h)
 add_library(mp4 ${SOURCE_FILES})
 
-string(TOLOWER sample binary_name)
-add_executable(${binary_name} main.cc)
-target_link_libraries(${binary_name} mp4)
+#string(TOLOWER sample binary_name)
+#add_executable(${binary_name} main.cc)
+#target_link_libraries(${binary_name} mp4)
